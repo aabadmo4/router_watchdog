@@ -2,7 +2,7 @@
 
 Un sistema autónomo basado en ESP32 para monitorizar la conexión a internet y reiniciar automáticamente el router mediante un relé en caso de caídas persistentes. Incluye una pantalla LCD I2C (0x27, 20x4) para visualizar el estado de la red en tiempo real.
 
-> 🎮 **¡Prueba el emulador LCD!** > He preparado una simulación web de la pantalla. [Haz clic aquí para ver el emulador interactivo](enlace-a-tu-github-pages-aqui) *(Requiere configurar GitHub Pages)*.
+> 🎮 **¡Prueba el emulador LCD!** > He preparado una simulación web de la pantalla. [Haz clic aquí para ver el emulador interactivo](https://aabadmo4.github.io/router_watchdog/) 
 
 ## 🌟 Características Principales
 
