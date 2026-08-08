@@ -1,3 +1,16 @@
+/*
+ * Watchdog Router - Reinicio automático GPRS/IP
+ * Copyright (c) 2026 Adán
+ *
+ * SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+ * Licensed under the PolyForm Noncommercial License 1.0.0.
+ * Uso comercial no permitido sin autorización expresa del autor.
+ * Full license: https://polyformproject.org/licenses/noncommercial/1.0.0
+ *
+ * Repo: https://github.com/aabadmo4/router_watchdog
+ * Version: 1.3
+ */
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ESP32Ping.h>
@@ -96,9 +109,9 @@ void loop() {
 
   } else {
     failedPings++;
-    publicIP = "Sin conexion";
+    publicIP = "No connection";
 
-    printRow(1, "Sin conexion");
+    printRow(1, "No connection");
     printRow(2, "Ping ERR " + String(failedPings) + "/" + String(MAX_FAILED_PINGS));
     printRow(3, "WAN: Error");
   }
@@ -140,7 +153,7 @@ String estadoWiFiTexto() {
   wl_status_t s = WiFi.status();
 
   if (s == WL_CONNECTED && WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
-    return "Error DHCP";
+    return "DHCP error";
   }
 
   switch (s) {
@@ -176,7 +189,7 @@ void reiniciarRouter() {
   printRow(0, "!ALERTA RED CAIDA!");
   printRow(1, "Reiniciando router");
   printRow(2, "Intento " + String(rebootCount) + "/" + String(MAX_REBOOTS_BEFORE_LOCKOUT));
-  printRow(3, "Corte de energia");
+  printRow(3, "AC Error");
 
   digitalWrite(RELAY_PIN, LOW);
   delay(10000);
@@ -209,7 +222,7 @@ void esperaLockout() {
     unsigned long minutos = i / 60;
     unsigned long segundos = i % 60;
     printRow(2, "Espera: " + String(minutos) + "m " + String(segundos) + "s");
-    printRow(3, "Posible fallo cobertura");
+    printRow(3, "GPRS Error");
     delay(1000);
   }
   lcd.clear();
