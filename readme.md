@@ -1,5 +1,7 @@
 # 🐕 Watchdog Router (v1.3)
 
+[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm--Noncommercial--1.0.0-blue.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0)
+
 Un sistema autónomo basado en ESP32 para monitorizar la conexión a internet y reiniciar automáticamente el router mediante un relé en caso de caídas persistentes. Incluye una pantalla LCD I2C (0x27, 20x4) para visualizar el estado de la red en tiempo real.
 
 > 🎮 **¡Prueba el emulador LCD!** > He preparado una simulación web de la pantalla. [Haz clic aquí para ver el emulador interactivo](https://aabadmo4.github.io/router_watchdog/) 
@@ -36,4 +38,13 @@ Si la red no vuelve tras múltiples reinicios, el sistema asume un problema exte
 2. Conecta tu relé al **PIN 23** del ESP32.
 3. Conecta los pines SDA y SCL de la pantalla LCD I2C.
 4. Compila y sube el código usando el IDE de Arduino.
-   
+
+## 📄 Licencia
+
+Este proyecto está publicado bajo **[PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)**.
+
+- ✅ Uso personal, educativo, de investigación o por organizaciones sin ánimo de lucro: libre.
+- ⚠️ **Uso comercial (empresas, integración en productos o servicios de pago) requiere autorización previa del autor.**
+- 🖊️ Debe mantenerse la atribución de autoría en cualquier copia o distribución.
+
+Copyright (c) 2026 Adán. Para licencias comerciales, contacta a través de [GitHub](https://github.com/aabadmo4).
