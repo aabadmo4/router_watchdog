@@ -21,18 +21,18 @@ A continuación, se muestran los diferentes estados que puede presentar la panta
 ### Estado Normal
 
 El sistema está conectado y con salida a internet.
-[![Estado OK](https://github.com/aabadmo4/router_watchdog/raw/main/assets/estado_ok.png)](/aabadmo4/router_watchdog/blob/main/docs/assets/estado_ok.png)
+[![Estado OK](https://github.com/aabadmo4/router_watchdog/raw/main/docs/assets/estado_ok.png)](/aabadmo4/router_watchdog/blob/main/docs/assets/estado_ok.png)
 
 
 ### Caída de Red y Reinicio
 
 El router pierde conexión. Tras 5 intentos, procede a cortar la energía temporalmente.
-[![Alerta Red Caída](https://github.com/aabadmo4/router_watchdog/raw/main/assets/alerta_caida.png)](/aabadmo4/router_watchdog/blob/main/docs/assets/alerta_caida.png)
+[![Alerta Red Caída](https://github.com/aabadmo4/router_watchdog/raw/main/docs/assets/alerta_caida.png)](/aabadmo4/router_watchdog/blob/main/docs/assets/alerta_caida.png)
 
 ### Fallo Persistente (Modo Lockout)
 
 Si la red no vuelve tras múltiples reinicios, el sistema asume un problema externo (cobertura) y pausa los reinicios durante 1 hora.
-[![Fallo Persistente](https://github.com/aabadmo4/router_watchdog/raw/main/assets/fallo_persistente.png)](/aabadmo4/router_watchdog/blob/main/docs/assets/fallo_persistente.png)
+[![Fallo Persistente](https://github.com/aabadmo4/router_watchdog/raw/main/docs/assets/fallo_persistente.png)](/aabadmo4/router_watchdog/blob/main/docs/assets/fallo_persistente.png)
 
 ## 🛠 Instalación y Configuración
 
