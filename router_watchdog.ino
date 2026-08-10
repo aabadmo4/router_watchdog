@@ -69,7 +69,8 @@ void setup() {
   delay(2000);
 
   pinMode(RELAY_PIN, OUTPUT);
-  digitalWrite(RELAY_PIN, HIGH); // Relé inactivo (Alimentación OK)
+  //digitalWrite(RELAY_PIN, HIGH); // Relé activo (Sin Alimentación)
+  digitalWrite(RELAY_PIN, LOW); // Relé inactivo (Alimentación NC OK)
 
   conectarWiFi();
   publicIP = obtenerIPPublica();
