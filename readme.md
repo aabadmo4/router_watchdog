@@ -38,11 +38,22 @@ Si la red no vuelve tras múltiples reinicios, el sistema asume un problema exte
 
 ## 🛠 Instalación y Configuración
 
-### Librerías necesarias (Gestor de Librerías de Arduino IDE)
+### Librerías necesarias
 
-- Core de placas **esp8266** (por ESP8266 Community)
-- `ESP8266Ping` (autor: dancol90)
-- `LiquidCrystal_I2C`
+Antes de nada, instala el **core de placas "esp8266"** (por ESP8266 Community) desde Herramientas > Placa > Gestor de Placas, si no lo tienes ya. Una vez instalado, estas librerías ya vienen incluidas y no requieren nada más:
+
+- `ESP8266WiFi.h`
+- `ESP8266HTTPClient.h`
+- `Wire.h`
+
+Estas otras dos **no** vienen incluidas y hay que instalarlas aparte:
+
+| Librería | Cómo instalarla |
+|---|---|
+| `LiquidCrystal_I2C` | Sketch > Include Library > **Manage Libraries...** (Ctrl+Mayús+I), busca "LiquidCrystal I2C" (autor: Frank de Brabander) e instálala. |
+| `ESP8266Ping` | No está en el Gestor de Librerías. Descárgala manualmente desde [github.com/dancol90/ESP8266Ping](https://github.com/dancol90/ESP8266Ping) (botón verde **Code > Download ZIP**), y luego en el IDE ve a Sketch > Include Library > **Add .ZIP Library...** y selecciona el ZIP descargado. |
+
+> ⚠️ Al compilar puede aparecer un aviso de que `LiquidCrystal_I2C` "pretende ejecutarse sobre arquitectura(s) avr" y podría ser incompatible con ESP8266. Es solo un aviso, no un error — la librería solo usa `Wire.h` internamente y funciona sin problemas en ESP8266. Si quieres eliminarlo, edita `library.properties` dentro de la carpeta de la librería instalada y cambia `architectures=avr` por `architectures=*`.
 
 ### Pasos
 
