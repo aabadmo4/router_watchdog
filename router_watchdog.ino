@@ -21,8 +21,8 @@
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 
 // Configuración WiFi
-const char* ssid = "TU_NOMBRE_DE_RED_WIFI";
-const char* password = "TU_CONTRASEÑA_WIFI";
+const char* ssid = "tech";
+const char* password = "777@Tech";
 
 // Pines y Parámetros
 // NOTA ESP8266: usamos D5 (GPIO14), libre de restricciones de arranque.
@@ -183,9 +183,11 @@ void reiniciarRouter() {
   printRow(2, "Intento " + String(rebootCount) + "/" + String(MAX_REBOOTS_BEFORE_LOCKOUT));
   printRow(3, "AC Error");
 
-  digitalWrite(RELAY_PIN, LOW);
-  delay(10000);
+  //digitalWrite(RELAY_PIN, LOW);
   digitalWrite(RELAY_PIN, HIGH);
+  delay(10000);
+  //(RELAY_PIN, HIGH);
+  digitalWrite(RELAY_PIN, LOW);
 
   failedPings = 0;
   publicIP = "Obteniendo...";
